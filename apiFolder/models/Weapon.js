@@ -7,8 +7,8 @@ const weaponSchema = mongoose.Schema({
     caliber: String,
     clipsize: String,
     originPlace: {
-        lat: Number,
-        long: Number
+        lat: String,
+        long: String
     }
 });
 

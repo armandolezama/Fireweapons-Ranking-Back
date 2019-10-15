@@ -1,7 +1,7 @@
-const Place = require('../models/Weapon');
+const Weapon = require('../models/Weapon');
 
 function createWeapon(req, res) {
-  const newWeapon = new Place({
+  const newWeapon = new Weapon({
     name: req.body.name,
     type: req.body.type,
     model: req.body.model,
@@ -12,6 +12,7 @@ function createWeapon(req, res) {
       long: req.body.originPlace.long
     }
   });
+
 
   newWeapon.save()
     .then(function(result){
